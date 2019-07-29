@@ -7,7 +7,6 @@
 		}
 	},
 	"variables": {
-		"aciName": "[concat(parameters('FQDNPrefix'), '-bootstrap')]",
 		"rgname": "[resourceGroup().name]",
 		"bootstrapRoleAssignmentId": "[guid(concat(resourceGroup().id, 'contributor'))]",
 		"identityName": "bootstrap-creds",
@@ -15,7 +14,7 @@
 		"containerName": "logs",
 		"deploymentImage": "neilpeterson/itt-bootstrap",
 		"sourceRepo": "https://github.com/neilpeterson/azure-template-code-bootstrap.git",
-		"entrypoint": "/deploy.sh",
+		"entrypoint": "/deployment/deploy.sh",
 		"sessionCode": "DEMO"
 	},
 	"resources": [{
