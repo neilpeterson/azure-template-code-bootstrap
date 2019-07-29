@@ -7,6 +7,7 @@
 		}
 	},
 	"variables": {
+		"aciName": "demno-bootstrap",
 		"rgname": "[resourceGroup().name]",
 		"bootstrapRoleAssignmentId": "[guid(concat(resourceGroup().id, 'contributor'))]",
 		"identityName": "bootstrap-creds",
