@@ -5,6 +5,7 @@ az login --identity -u $MANAGED_IDENTITY
 
 # Tag Resource Group
 az group update --resource-group $RESOURCE_GROUP_NAME --tags ITT-Tracking=$SESSION_CODE
+az group update --resource-group $RESOURCE_GROUP_NAME --tags CreatedBy=$USER_ID
 
 # Get scripts and deployment assets
 git clone $SOURCE_REPOSITORY
