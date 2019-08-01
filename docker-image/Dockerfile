@@ -1,4 +1,14 @@
-FROM microsoft/azure-cli
+FROM mcr.microsoft.com/powershell
+
+# Install apt-get
+RUN apt-get update && \
+    apt-get install curl -y
+
+# Install Git
+RUN apt-get install git -y
+
+# Install Azure CLI
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 # Install Helm
 RUN curl -L https://git.io/get_helm.sh | bash
